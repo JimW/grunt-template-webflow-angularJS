@@ -6,7 +6,7 @@
 ## Description
 > This sample webflow-angular integration mimicks the demo angular app created around this [CustomerManager Sample App] by [Dan Wahlin]. Rather than relying on the partial files of that demo, this project will extract them out from your downloaded webflow.zip file.  It expects that you follow the class and id conventions defined at the bottom.
 
-[grunt-webflow-angularJS]: https://github.com/jimw/grunt-template-webflow-angular
+[grunt-webflow-angularJS]: https://github.com/JimW/grunt-template-webflow-angularJS.git
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [webflow.com]: https://webflow.com
 [CustomerManager Sample App]: https://github.com/DanWahlin/CustomerManager
@@ -23,7 +23,7 @@
 >>It's recommended that you use git to clone this template into that directory, as follows:  
 >>
 ```
-git clone https://github.com/jimw/grunt-template-webflow-angular.git ~/.grunt-init/webflow-angular
+git clone https://github.com/JimW/grunt-template-webflow-angularJS.git ~/.grunt-init/webflow-angularJS
 ```
 >
 _(Windows users, see [the documentation][grunt-init] for the correct destination directory path)_
@@ -35,7 +35,7 @@ _(Windows users, see [the documentation][grunt-init] for the correct destination
 At the command-line, cd into an empty directory, run these commands:  
 
 >>```
- grunt-init webflow-angular
+ grunt-init webflow-angularJS
 ```
 >
 _Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
