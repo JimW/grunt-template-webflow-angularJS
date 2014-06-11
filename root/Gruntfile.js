@@ -180,9 +180,17 @@ module.exports = function(grunt) {
       scripts_to_site_js: {
         expand: true,
         flatten: true, 
-        cwd: 'Scripts', 
+        cwd: 'content/scripts', 
         src: ['**/*.js'],
         dest: opt.site + '/js'
+      },
+
+      cs_to_site_cs: {
+        expand: true,
+        flatten: true, 
+        cwd: 'content/css', 
+        src: ['**/*.cs'],
+        dest: opt.site + '/cs'
       },
       // TODO: Copy a file that contains some diagnostic data into the _site, type of build, date, etc
     },
