@@ -47,20 +47,18 @@ _Note that this template will generate files in the current directory, so be sur
 to install all the node modules specified in the newly created package.json
 
 #### Step 3:
->Download yourappname.webflow.zip from [webflow.com] into your downloadZipDir.
-
-#### Step 4:
 >>```grunt webflow```
 >
 will unzip and parse any angular partials from the yourappname.webflow.zip that you downloaded from [webflow.com].  It will start a local webserver and serve up the project via:  
 >>
 ```localhost:9009```
 
-#### Step 5:
+#### Step 4:
 > Once everything seems to be working with the local predefined zip file, fix the problem in the gruntfile.js :) It is somehow stripping the style info from the delete button. The correct behavior is that when you hover over the X within the customer list, it should expand the button 1.2x. Search for 'HELP' within gruntfile.js.
 
-#### Step 6:
+#### Step 5:
 > Use your own webflow export and see how it goes.
+> Download yourappname.webflow.zip from [webflow.com] into your downloadZipDir.
 
 >
 Update `_grunt_configs/webflow.json`  
