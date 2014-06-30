@@ -54,10 +54,7 @@ will unzip and parse any angular partials from the yourappname.webflow.zip that 
 ```localhost:9009```
 
 #### Step 4:
-> Once everything seems to be working with the local predefined zip file, fix the problem in the gruntfile.js :) It is somehow stripping the style info from the delete button. The correct behavior is that when you hover over the X within the customer list, it should expand the button 1.2x. Search for 'HELP' within gruntfile.js.
-
-#### Step 5:
-> Use your own webflow export and see how it goes.
+> Once everything seems to be working with the local predefined zip file, use your own webflow export and see how it goes.
 > Download yourappname.webflow.zip from [webflow.com] into your downloadZipDir.
 
 >
@@ -74,7 +71,7 @@ Look at the sample webflow site included within the sample_download folder, to s
 >>####mockmeUp 
 Specifies elements that should be discarded during import into the Angular App.
 >>####directive 
-After processing any child elements of an elements with a class of 'directive', all child elements will be removed and the element type will be replaced by the specified directive name, as defined by it's ID.  This is necessary because webflow current does not allow the specification of directives in any other way that I could find.
+After processing any child elements of an elements with a class of 'directive', all child elements will be removed and the element type will be replaced by the specified directive name, as defined by it's ID.  This is necessary because webflow currently does not allow the specification of directives in any other way that I could find.
 >>####template
 Specifies a hierarchy of elements whose children will all be saved into a seperate partial html file, to be used by angular.  The name of this partial html file is specied by it's id.
 
@@ -83,11 +80,9 @@ Specifies a hierarchy of elements whose children will all be saved into a sepera
 
 ## TODOs
 
-1. Figure out why webflow.js inline styles are getting lost during template extraction. Search for "HELP" in gruntfile.js
+1. Make the watch work for the download directory so that once a new download appears, the site is automatically updated.  grunt-watch currently won't pickup on a new file being added to an empty folder for some reason.  
 
-2. Make the watch work for the download directory so that once a new download appears, the site is automatically updated.  grunt-watch currently won't pickup on a new file being added to an empty folder for some reason.  
+2. Do other TODOs scattered throughout the gruntfile, form submission is not working totally
 
-3. Do other TODOs scattered throughout the gruntfile, form submission is not working totally
-
-4. No idea if this works on a PC
+3. No idea if this works on a PC
 

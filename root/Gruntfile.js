@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   
   var scriptsToAddHead = grunt.file.read('app/views/includes/headScripts.html');
   var scriptsToAddBody = grunt.file.read('app/views/includes/bodyScripts.html');
+  var webflowScript = grunt.file.read('app/views/includes/webflowScript.html');
 
   // Read webflow settings 
   var webflowConfigs = grunt.file.readJSON('_grunt_configs/webflow.json');
@@ -77,12 +78,12 @@ module.exports = function(grunt) {
       webflow_raw: {
         src: [opt.webflow_temp_dir]
       },
-      webflow_downloaded_zip: {
-        options: {
-          force: true,
-        },
-        src: [opt.webflow_raw_zip_folder + '/' + opt.webflow_zip]
-      },
+      // webflow_downloaded_zip: {
+      //   options: {
+      //     force: true,
+      //   },
+      //   src: [opt.webflow_raw_zip_folder + '/' + opt.webflow_zip]
+      // },
       temp: {
         src: ['temp']
       },
@@ -117,11 +118,7 @@ module.exports = function(grunt) {
 
             $(".template").each(function () {
               var templateName = $(this).attr("id");
-              // HELP..
-              // TODO: Why are inline styles related to webflow interactions/animations not appearing here.
-              // A dom_munger/cheerio/htmlparser2 problem stripping inline styles?  
-              // Either way webflow ix stuff is not inserting it's stubs, maybe because it's generated dynamically in an ng-repeat? 
-              fs.writeFileSync(templateFolder + '/' + templateName + '.html',$(this)); 
+              fs.writeFileSync(templateFolder + '/' + templateName + '.html',$(this) + webflowScript); 
             });
 
           },
