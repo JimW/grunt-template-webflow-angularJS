@@ -11,6 +11,7 @@ A [grunt-init] template for integrating [webflow.com] into an angularJS app .
 [webflow.com]: https://webflow.com
 [CustomerManager Sample App]: https://github.com/DanWahlin/CustomerManager
 [Dan Wahlin]:http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
+[Sample Webflow Preview]:https://webflow.com/design/angularjsdemos?preview=4827e2759f4c685919101def23ae3ca6
 
 ## Installation
 
@@ -51,7 +52,7 @@ to install all the node modules specified in the newly created package.json
 ```
 grunt webflow
 ```
-will unzip and parse any angular partials from the yourappname.webflow.zip that you downloaded from [webflow.com].  It will start a local webserver and serve up the project:  
+will unzip and parse any angular partials from the sample_download direcory.  It will start a local webserver and serve up the project:  
 
 browse to:
 ```
@@ -59,7 +60,7 @@ http://localhost:9009
 ```
 
 #### Step 4:
-Once everything seems to be working with the local predefined zip file, use your own webflow export and see how it goes.
+Once everything seems to be working with the local predefined sample zip file, use your own webflow export and see how it goes.
 Download yourappname.webflow.zip from [webflow.com] into your downloadZipDir.
 
 Update ```_grunt_configs/webflow.json```
@@ -73,7 +74,7 @@ Update ```_grunt_configs/webflow.json```
 
 ##Webflow.com Instructions:
 
-Look at the sample webflow site included within the sample_download folder, to see an example of how the DOM elements can be structured for extraction by the tasks defined within the gruntfile associated with this template. 
+Look at the sample webflow site included within the sample_download folder, to see an example of how the DOM elements can be structured for extraction by the tasks defined within the gruntfile associated with this template. Here is a [Sample Webflow Preview] version, but at some point, I'll need my 20th paid slot for other sites.
 
 ### Special Classes to be Used within Webflow:
 
